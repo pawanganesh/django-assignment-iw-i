@@ -1,0 +1,23 @@
+
+
+
+
+body{
+    background-color: #f2f2f2;
+}
+
+.main{
+    min-height: 100vh;
+    height: 100%;
+}
+
+
+
+
+/*footer starts here*/
+footer{
+    min-width: 100px;
+    min-height: 100px;
+}
+/*footer ends here*/
+

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for post in posts %}
+        <div class="container">
+        <div class="card m-auto">
+            <a href="{% url 'blog:detail' post.slug %}">
+                <img src="{{ post.image.url }}" class="card-img-top">
+            </a>
+            <div class="card-body my-2">
+                <a href="{% url 'blog:detail' post.slug %}">
+                    <h2 class="class-title">{{ post.title }}</h2>
+                </a>
+                <p class="card-text">{{ post.content }}</p>
+            </div>
+            <div class="card-footer text-muted">
+                    Created at: {{ post.created_at }}
+                    Updated On: {{ post.updated_at }}
+                    Author: {{ post.author }}
+            </div>
+        </div>
+        </div>
+    {% endfor %}
+
+{% endblock %}
